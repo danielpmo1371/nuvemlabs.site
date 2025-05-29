@@ -1,11 +1,14 @@
 # Nuvem Labs Website Landing Page
 
+> **Note**: This project is maintained as a git submodule of the main [danielpaiva](https://github.com/danielpmo1371/danielpaiva) repository.  
+> **Repository**: https://github.com/danielpmo1371/nuvemlabs.site  
+> **Live Site**: www.nuvemlabs.co.nz
+
 ## Project info
 
 **URL**: www.nuvemlabs.co.nz
 
 **Getting started**
-
 
 ```sh
 # Step 3: Install the necessary dependencies.
@@ -38,3 +41,25 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
+## Git Submodule Information
+
+This repository is included as a submodule in the main danielpaiva repository. To work with this project:
+
+### As a Standalone Repository
+```sh
+# Clone this repository directly
+git clone https://github.com/danielpmo1371/nuvemlabs.site.git
+cd nuvemlabs.site
+npm install
+npm run dev
+```
+
+### As Part of Parent Repository
+```sh
+# Clone parent repository with submodules
+git clone --recurse-submodules https://github.com/danielpmo1371/danielpaiva.git
+cd danielpaiva/projects/nuvemlabs.site
+npm install
+npm run dev
+```
