@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -30,13 +30,17 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-              <span>Get Started</span>
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-foreground/20 hover:bg-foreground/5 text-foreground">
-              Learn More
-            </Button>
+            <Link to="/get-started">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+                <span>Get Started</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link to="/learn-more">
+              <Button size="lg" variant="outline" className="border-foreground/20 hover:bg-foreground/5 text-foreground">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
         
