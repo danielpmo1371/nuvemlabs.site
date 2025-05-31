@@ -16,6 +16,9 @@ import {
   Target
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const LearnMore = () => {
   const services = [
@@ -168,8 +171,10 @@ const LearnMore = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <AnimatedBackground />
+      <Navbar />
+      <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
             <Link to="/">
@@ -320,6 +325,7 @@ const LearnMore = () => {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

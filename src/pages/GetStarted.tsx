@@ -5,6 +5,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ArrowRight, CheckCircle, Bot, Code, Smartphone, Workflow } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const GetStarted = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -62,8 +65,10 @@ const GetStarted = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <AnimatedBackground />
+      <Navbar />
+      <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <Link to="/">
@@ -308,6 +313,7 @@ const GetStarted = () => {
           </Card>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

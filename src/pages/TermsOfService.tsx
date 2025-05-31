@@ -2,11 +2,16 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <AnimatedBackground />
+      <Navbar />
+      <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <Link to="/">
@@ -185,6 +190,7 @@ const TermsOfService = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
